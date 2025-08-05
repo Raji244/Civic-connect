@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CivicConnect</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>CivicConnect</h1>
+    <nav>
+      <button onclick="showSection('report')">Report Issue</button>
+      <button onclick="showSection('announcements')">Community Announcements</button>
+      <button onclick="showSection('events')">Local Events & Discussions</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Report Issue -->
+    <section id="report" class="active">
+      <h2>Report a Civic Issue</h2>
+      <form id="reportForm">
+        <input type="text" placeholder="Issue Title" required />
+        <input type="text" placeholder="Location" required />
+        <textarea placeholder="Description" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <ul id="reportList"></ul>
+    </section>
+
+    <!-- Announcements -->
+    <section id="announcements">
+      <h2>Community Announcements</h2>
+      <form id="announcementForm">
+        <input type="text" placeholder="Announcement Title" required />
+        <textarea placeholder="Announcement Message" required></textarea>
+        <button type="submit">Post</button>
+      </form>
+      <ul id="announcementList"></ul>
+    </section>
+
+    <!-- Events/Discussions -->
+    <section id="events">
+      <h2>Local Events & Discussions</h2>
+      <form id="eventForm">
+        <input type="text" placeholder="Event/Topic" required />
+        <textarea placeholder="Details" required></textarea>
+        <button type="submit">Share</button>
+      </form>
+      <ul id="eventList"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
